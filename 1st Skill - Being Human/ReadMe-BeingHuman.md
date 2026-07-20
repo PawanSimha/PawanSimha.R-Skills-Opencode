@@ -1,6 +1,6 @@
-# BeingHuman
+# BeingHuman — README
 
-## An Evidence-Based AI Writing Optimization Skill for OpenCode
+## An AI writing optimization skill for OpenCode
 
 **Version 1.0** — July 2026
 
@@ -35,17 +35,17 @@
 
 ### The Spark
 
-The project began after watching a YouTube Short by **Sridev Ramesh** (Co-Founder & CEO of 100xEngineers). The video demonstrated a Claude Skill called **beinghuman** — a tool that rewrites AI-generated text to sound human by studying Wikipedia's article *"Signs of AI Writing"* and converting every pattern into permanent behavioral rules.
+The project started after a YouTube Short by **Sridev Ramesh** (Co-Founder & CEO of 100xEngineers). The video showed a Claude Skill called **beinghuman** that rewrites AI-generated text to sound human. It used Wikipedia's article *"Signs of AI Writing"* and turned each pattern into behavioral rules.
 
 [IMAGE — Sridev Ramesh YouTube Short]
 
 ### The Idea
 
-The concept was compelling: what if AI could systematically detect and remove its own writing fingerprints? The Claude implementation proved it was possible. The question became — could the same capability be built for **OpenCode**, an open-source coding agent?
+The Claude implementation showed it was possible to detect and remove AI writing patterns systematically. The question was whether the same approach could work in **OpenCode**, an open-source coding agent.
 
 ### The Knowledge Source
 
-The primary research foundation was **Wikipedia's article "Signs of AI Writing"** — a community-documented catalog of patterns that make text identifiable as AI-generated. The article catalogs:
+The research foundation was **Wikipedia's article "Signs of AI Writing"** — a community-documented catalog of patterns that make text identifiable as AI-generated:
 
 - Overrepresented vocabulary
 - Repetitive sentence structures
@@ -57,7 +57,7 @@ The primary research foundation was **Wikipedia's article "Signs of AI Writing"*
 
 ### Why This Matters
 
-AI writing detectors (Grammarly, GPTZero, Originality.ai, Turnitin) work by identifying these statistical artifacts. When AI writes, it produces text with measurable patterns — certain words co-occur at unnaturally high rates, sentences follow predictable templates, and content lacks the irregularities of human expression. BeingHuman removes these artifacts while preserving meaning, accuracy, and appropriate tone.
+AI writing detectors (Grammarly, GPTZero, Originality.ai, Turnitin) find these statistical patterns. When AI writes, certain words appear together at unnatural rates. Sentences follow predictable templates. Content lacks the irregularities of human writing. BeingHuman removes these artifacts while keeping meaning, accuracy, and tone intact.
 
 ---
 
@@ -65,7 +65,7 @@ AI writing detectors (Grammarly, GPTZero, Originality.ai, Turnitin) work by iden
 
 ### Methodology
 
-Rather than copying the Claude implementation directly, the approach was to **reverse engineer the entire methodology** and rebuild it from first principles.
+The approach was to reverse engineer the methodology from the Claude implementation and rebuild it from first principles.
 
 ```
 YouTube Short (Sridev Ramesh)
@@ -96,15 +96,15 @@ Wikipedia Article      Rule Categories
 ### ChatGPT's Role
 
 ChatGPT acted as:
-- **Technical Reviewer** — analyzed every section of the extracted patterns
+- **Technical Reviewer** — analyzed each section of the extracted patterns
 - **Architecture Consultant** — reviewed the skill structure and suggested improvements
-- **Prompt Engineering Assistant** — helped design better detection and rewrite prompts
+- **Prompt Engineering Assistant** — helped design detection and rewrite prompts
 - **Quality Assurance** — verified implementation decisions
 - **Verification Assistant** — checked outputs for consistency
 
 ### OpenCode's Role
 
-OpenCode (using the **DeepSeek** model) was responsible for:
+OpenCode (using DeepSeek) handled:
 - Generating the `SKILL.md` file via the Skill Creator
 - Implementing all pattern detection rules
 - Encoding rewrite strategies
@@ -113,7 +113,7 @@ OpenCode (using the **DeepSeek** model) was responsible for:
 
 ### The Priority Rule Engine Enhancement
 
-After the first implementation was generated, ChatGPT identified an architectural improvement: **not all patterns are equally important**. Rather than treating every rule with equal weight, a **Priority Rule Engine** was introduced with four levels:
+After the first implementation, ChatGPT suggested an architectural improvement: not all patterns carry equal weight. A **Priority Rule Engine** was added with four levels:
 
 | Priority | Meaning | Action |
 |----------|---------|--------|
@@ -122,13 +122,13 @@ After the first implementation was generated, ChatGPT identified an architectura
 | **MEDIUM** | Moderate signal, also in human writing | Fix unless domain conflict |
 | **LOW** | Weak signal or model-specific | Skip if harms quality |
 
-This prevents unnecessary rewriting, protects technical writing, and applies the strongest AI indicators first.
+This prevents unnecessary rewriting, protects technical writing, and applies the strongest indicators first.
 
 ---
 
 ## 3. How It Works — Architecture Overview
 
-The skill operates as a **three-phase pipeline** inside OpenCode:
+The skill runs as a **three-phase pipeline** inside OpenCode:
 
 ```
          Input Text
@@ -136,7 +136,7 @@ The skill operates as a **three-phase pipeline** inside OpenCode:
              v
   ┌──────────────────────────────────────┐
   │      PRIORITY RULE ENGINE            │
-  │  Critical → High → Medium → Low     │
+  │  Critical -> High -> Medium -> Low   │
   │  (Filters patterns by severity)      │
   └──────────────┬───────────────────────┘
                  |
@@ -173,12 +173,12 @@ The skill operates as a **three-phase pipeline** inside OpenCode:
 
 ### Core Principles
 
-The skill operates on four inviolable rules:
+The skill follows four rules:
 
 1. **Preserve meaning.** Never change facts, numbers, quotes, code, or citations.
-2. **Never invent.** Do not add facts, sources, or analysis not present in the original.
+2. **Never invent.** Do not add facts, sources, or analysis not in the original.
 3. **Never reduce accuracy.** Domain terminology stays. Technical precision stays.
-4. **Do not casualize.** Natural human writing ≠ informal writing. Academic and professional tones are valid.
+4. **Do not casualize.** Natural human writing is not the same as informal writing. Academic and professional tones are valid.
 
 ---
 
@@ -186,7 +186,7 @@ The skill operates on four inviolable rules:
 
 ### Why Priority Matters
 
-AI writing patterns exist on a spectrum. Some are near-definitive indicators (e.g., the word *delve* has statistically proven overuse post-2022). Others are weaker signals that also appear in human writing (e.g., the rule of three). Applying all rules indiscriminately would produce unnatural, over-corrected text.
+AI writing patterns exist on a spectrum. Some are near-definitive indicators. The word *delve* has statistically proven overuse after 2022. Others are weaker signals that also appear in human writing. The rule of three is one example. Applying all rules indiscriminately produces over-corrected text.
 
 ### Processing Order
 
@@ -217,15 +217,15 @@ AI writing patterns exist on a spectrum. Some are near-definitive indicators (e.
 
 | Level | Diagnostic Strength | Action Rule | Example Pattern |
 |-------|--------------------|-------------|-----------------|
-| CRITICAL | Near-definitive | Always fix | AI vocabulary (*delve*, *tapestry*, *pivotal*) |
+| CRITICAL | Near-definitive | Always fix | AI vocabulary (delve, tapestry, pivotal) |
 | HIGH | Strong statistical signal | Fix almost always | Significance overlay, -ing tail clauses |
 | MEDIUM | Moderate signal | Fix unless conflict | Negative parallelism, Challenges template |
 | LOW | Weak / model-specific | Skip if harms | Title case headings, em dash overuse |
 
 ### Conflict Resolution Rules
 
-- If a higher-priority fix already resolves a lower-priority pattern, do not re-apply.
-- If a LOW priority rule would reduce technical accuracy, skip it entirely.
+- If a higher-priority fix already resolves a lower-priority pattern, do not reapply.
+- If a LOW priority rule would reduce technical accuracy, skip it.
 - If a MEDIUM rule conflicts with domain-appropriate formality, skip it.
 
 ---
@@ -236,7 +236,7 @@ The detection phase scans input text for **four categories** of AI writing patte
 
 ### 5.1 Vocabulary — AI Word Clusters
 
-Certain words co-occur in LLM output at rates far exceeding human writing. These are the strongest tells.
+Certain words co-occur in LLM output at rates far above human writing. These are the strongest tells.
 
 | Priority | Category | Words to Remove |
 |----------|----------|-----------------|
@@ -264,19 +264,19 @@ Certain words co-occur in LLM output at rates far exceeding human writing. These
 | HIGH | Broader context inflation | Linking everything to a "broader movement" |
 | MEDIUM | Challenges + Future Prospects | Cookie-cutter sections with formulaic optimism |
 | HIGH | Weasel attribution | "Some scholars argue", "Experts suggest" |
-| MEDIUM | Source count inflation | 1–2 sources presented as "multiple" |
+| MEDIUM | Source count inflation | 1-2 sources presented as "multiple" |
 | HIGH | Notability hammering | Listing media outlets with type labels |
 
 ### 5.4 Formatting — AI Quirks
 
 | Priority | Quirk | Fix |
 |----------|-------|-----|
-| LOW | Title case in headings | → Sentence case |
+| LOW | Title case in headings | -> Sentence case |
 | LOW | Overuse of boldface | Bold only article title in lead |
-| LOW | Em dashes (overuse) | → Commas or separate sentences |
-| LOW | Curly quotation marks | → Straight quotes |
-| LOW | Emoji as formatting | → Remove from non-casual text |
-| CRITICAL | Placeholder text {like this} | → Remove or fill |
+| LOW | Em dashes (overuse) | -> Commas or separate sentences |
+| LOW | Curly quotation marks | -> Straight quotes |
+| LOW | Emoji as formatting | -> Remove from non-casual text |
+| CRITICAL | Placeholder text {like this} | -> Remove or fill |
 
 ---
 
@@ -322,7 +322,7 @@ For every sentence, ask: would this sentence still be true without the significa
 
 ### Rule 5: Eliminate Weasel Words
 
-Remove: *arguably, purportedly, supposedly, reportedly, allegedly, some might say, it could be argued, it is believed, many consider, broadly regarded* — unless directly sourced.
+Remove: *arguably, purportedly, supposedly, reportedly, allegedly, some might say, it could be argued, it is believed, many consider, broadly regarded* unless directly sourced.
 
 ### Rule 6: Break the Rhythm
 
@@ -333,13 +333,13 @@ Read output aloud. If three consecutive sentences share the same structure, rewr
 
 ### Rule 7: Keep Domain Terminology
 
-Never replace: medical terms, legal terms of art, scientific nomenclature, technical jargon, mathematical notation. The goal is natural human writing at the **appropriate register**, not simplification.
+Never replace: medical terms, legal terms of art, scientific nomenclature, technical jargon, mathematical notation. The goal is natural human writing at the appropriate register, not simplification.
 
 ---
 
 ## 7. Phase 3 — Internal Review
 
-Before returning any output, the skill silently verifies all 18 points:
+Before returning any output, the skill verifies all 18 points:
 
 | # | Check | Purpose |
 |---|-------|---------|
@@ -347,7 +347,7 @@ Before returning any output, the skill silently verifies all 18 points:
 | 2 | Zero -ing tail clauses | Removes false significance |
 | 3 | Zero notability boilerplate | Removes Wikipedia-style padding |
 | 4 | Zero canned templates | Removes formulaic structure |
-| 5 | ≤1 em dash per 3 paragraphs | Normalizes punctuation |
+| 5 | <=1 em dash per 3 paragraphs | Normalizes punctuation |
 | 6 | No title case in headings | Fixes formatting tell |
 | 7 | No boldface abuse | Fixes formatting tell |
 | 8 | No weasel words | Ensures honest attribution |
@@ -375,7 +375,7 @@ Certain fields have legitimate reasons for patterns that would otherwise be flag
 | **Academic writing** | Formal register, passive voice, source-backed significance | Weasel words, AI vocabulary, puffery |
 | **Scientific writing** | Passive voice, nominalizations, complex terminology | Empty significance, AI vocabulary |
 | **Technical documentation** | Imperative tone, structured lists, bold for UI elements | Marketing language, AI vocabulary |
-| **Legal writing** | Archaic terms (*whereof*, *herein*), formal constructions | Weasel words, canned templates |
+| **Legal writing** | Archaic terms (whereof, herein), formal constructions | Weasel words, canned templates |
 | **Medical writing** | Clinical terminology, cautious hedging ("may indicate") | Puffery, AI vocabulary, unsupported significance |
 | **Quotations** | Anything the source says | Never alter quotations |
 | **Code / Math** | Any code or mathematical notation | Never alter |
@@ -428,7 +428,7 @@ Certain fields have legitimate reasons for patterns that would otherwise be flag
 
 ### Activation
 
-Once installed, the skill activates automatically when you:
+The skill activates automatically when you:
 - Type `/beinghuman` as a slash command
 - Ask to "make this sound human"
 - Say "rewrite this to not sound like AI"
@@ -449,15 +449,15 @@ Once installed, the skill activates automatically when you:
 > Hollywood is a neighborhood in Los Angeles, California. It is the historical center of the American film industry. Film companies moved to Hollywood in the early 1910s. They were escaping Thomas Edison's patent restrictions on the East Coast. By the 1920s, Hollywood was producing most of the world's movies. The Hollywood Walk of Fame was established in 1958. It has over 2,700 stars along 15 blocks of Hollywood Boulevard and three blocks of Vine Street. Each star honors someone in film, television, music, radio, or theater. Film production moved to other cities in the late 1900s. Hollywood went through a period of decline. New businesses and theaters arrived in the 2000s.
 
 **What Changed:**
-- "serves as the historical center" → "is the historical center"
-- "fleeing Thomas Edison's patent restrictions" → broken into separate sentence
-- "had become the dominant force in global cinema" → removed significance overlay
-- "Each star commemorates a notable figure" → "Each star honors someone"
-- "experienced significant decline... However, revitalization efforts" → simplified to "went through a period of decline. New businesses and theaters arrived"
+- "serves as the historical center" -> "is the historical center"
+- "fleeing Thomas Edison's patent restrictions" -> broken into separate sentence
+- "had become the dominant force in global cinema" -> removed significance overlay
+- "Each star commemorates a notable figure" -> "Each star honors someone"
+- "experienced significant decline... However, revitalization efforts" -> simplified
 
 ---
 
-### Example 2: Email — Product Launch
+### Example 2: Email - Product Launch
 
 **Original (AI):**
 
@@ -497,15 +497,15 @@ Once installed, the skill activates automatically when you:
 
 ### Testing Methodology
 
-The skill was validated using a controlled experiment:
+The skill was tested using a controlled experiment:
 
-1. **Sample Text:** A paragraph about Hollywood written without any humanization.
+1. **Sample Text:** A paragraph about Hollywood written without humanization.
 2. **Input A (Control):** Raw AI-generated text, no BeingHuman applied.
 3. **Input B (Test):** Same text processed through BeingHuman.
 4. **Detection Tool:** Grammarly AI Detection.
 5. **Environment:** OpenCode running DeepSeek model.
 
-[IMAGE — Grammarly Validation Results]
+[IMAGE - Grammarly Validation Results]
 
 ### Results
 
@@ -519,14 +519,14 @@ The skill was validated using a controlled experiment:
 | Formal Transitions | "However,", "originally erected" | Simple statements |
 | Text Length | ~30% longer | Concise |
 
-[IMAGE — Before vs After Side-by-Side]
+[IMAGE - Before vs After Side-by-Side]
 
 ### Key Observations
 
-- The "With BeingHuman" version was approximately **30% shorter** due to removed significance overlay and simplified verb phrases.
-- No facts were changed — only the presentation was humanized.
-- The output reads more like spoken English while remaining grammatically correct.
-- Technical accuracy was fully preserved.
+- The "With BeingHuman" version was about **30% shorter** after removing significance overlay and simplifying verb phrases.
+- Facts stayed the same. Only the presentation changed.
+- The output reads more like spoken English while staying grammatically correct.
+- Technical accuracy was preserved.
 
 ---
 
@@ -534,17 +534,17 @@ The skill was validated using a controlled experiment:
 
 ### How to Add New Patterns
 
-The detection rules are in the **Phase 1** section of `SKILL.md`. Each pattern follows this format:
+Detection rules are in the **Phase 1** section of `SKILL.md`. Each pattern follows this format:
 
 ```
 | PRIORITY | Category | AI Words/Fix |
 ```
 
-To add a new pattern, insert a row with the appropriate priority level. Run verification afterward to confirm the pattern is detected correctly.
+To add a new pattern, insert a row with the right priority level. Run verification afterward.
 
 ### How to Modify Priority Levels
 
-Change the priority label (CRITICAL / HIGH / MEDIUM / LOW) in the pattern table. The processing engine automatically reorders based on priority. Ensure the new priority aligns with the diagnostic strength of the indicator.
+Change the priority label (CRITICAL / HIGH / MEDIUM / LOW) in the pattern table. The processing engine reorders based on priority.
 
 ### How to Extend Domain Exceptions
 
@@ -561,13 +561,13 @@ The skill checks the input context against these domains before applying rules.
 2. Run `/beinghuman` on the file.
 3. Check the output against the 18-point checklist.
 4. Verify with an AI detection tool (Grammarly, GPTZero, etc.).
-5. Adjust priority or wording as needed and re-test.
+5. Adjust priority or wording as needed and retest.
 
 ### Best Practices
 
 - Always test with real AI-generated text, not hand-crafted examples.
 - Verify no facts were changed after processing.
-- Use the Grammarly AI detection test as a benchmark.
+- Use Grammarly AI detection as a benchmark.
 - Keep domain exceptions updated for new use cases.
 - Document any custom patterns added for your organization.
 
@@ -638,9 +638,9 @@ Master of Computer Applications (MCA) Student
 
 Interests: Artificial Intelligence, Machine Learning, Deep Learning, Prompt Engineering, AI Product Management, Developer Experience
 
-This project reflects a deep interest in creating practical AI developer tools through research-driven prompt engineering. BeingHuman was born from curiosity about how AI writing detection works and a desire to build tools that help developers produce more natural, human-sounding text without sacrificing accuracy or professionalism.
+Pawan built BeingHuman to understand AI writing detection and create tools that produce natural text without losing accuracy.
 
-[IMAGE — About the Author]
+[IMAGE - About the Author]
 
 **Connect:**
 - LinkedIn: [LINKEDIN LINK]
@@ -652,13 +652,13 @@ This project reflects a deep interest in creating practical AI developer tools t
 
 | Source | Role in Project |
 |--------|----------------|
-| Wikipedia — "Signs of AI Writing" | Primary knowledge foundation for all patterns |
-| Sridev Ramesh — YouTube Short | Original inspiration (Claude beinghuman demo) |
-| Anthropic — Claude | Original beinghuman implementation reference |
-| OpenCode — Skill Creator | Implementation platform |
-| DeepSeek — Language Model | Model used during development |
-| ChatGPT — OpenAI | Architecture review, QA, prompt engineering |
-| Grammarly — AI Detection | Validation tool for before/after testing |
+| Wikipedia - "Signs of AI Writing" | Primary knowledge foundation for all patterns |
+| Sridev Ramesh - YouTube Short | Original inspiration (Claude beinghuman demo) |
+| Anthropic - Claude | Original beinghuman implementation reference |
+| OpenCode - Skill Creator | Implementation platform |
+| DeepSeek - Language Model | Model used during development |
+| ChatGPT - OpenAI | Architecture review, QA, prompt engineering |
+| Grammarly - AI Detection | Validation tool for before/after testing |
 
 ### Acknowledgements
 
