@@ -1,0 +1,44 @@
+DIFFERENCE SUMMARY: With BeHuman vs Without BeHuman
+
+1. SENTENCE LENGTH
+   - Without: Long, compound sentences
+   - With: Short, simple sentences (one idea per sentence)
+
+2. VERB PHRASES
+   - Without: "serves as the historical center"
+   - With: "is the historical center"
+
+3. -ING TAIL CLAUSES
+   - Without: "fleeing Thomas Edison's patent restrictions",
+     "producing thousands of films each year",
+     "honoring outstanding achievements"
+   - With: Restructured into separate sentences
+     "They were escaping..."
+     "By the 1920s, Hollywood was producing..."
+
+4. SIGNIFICANCE OVERLAY (removed)
+   - "dominant force in global cinema"
+   - "major landmark"
+   - "most iconic landmarks in the United States"
+
+5. COMMONLY KNOWN AS
+   - Without: "commonly known as the Oscars"
+   - With: "or Oscars"
+
+6. DECLINE FRAMING
+   - Without: "experienced significant decline" +
+     "faced economic challenges" + "revitalization efforts"
+   - With: "went through a period of decline" +
+     "New businesses and theaters arrived"
+
+7. FORMAL TRANSITIONS
+   - Without: "However,", "originally erected in 1923 as"
+   - With: "was put up in 1923. It was"
+
+8. AI VOCABULARY
+   - Without: None detected (clean on this front)
+   - With: Same (no change needed)
+
+OVERALL: The "With" version is ~30% shorter,
+reads more like spoken English, and avoids
+framing everything as historically significant.
