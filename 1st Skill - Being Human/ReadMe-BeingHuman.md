@@ -8,7 +8,7 @@
 
 ---
 
-[IMAGE — Cover Page]
+![BeingHuman Skill Interface](images/1st%20-%20Interface%20image.png)
 
 ---
 
@@ -37,7 +37,7 @@
 
 The project started after a YouTube Short by **Sridev Ramesh** (Co-Founder & CEO of 100xEngineers). The video showed a Claude Skill called **beinghuman** that rewrites AI-generated text to sound human. It used Wikipedia's article *"Signs of AI Writing"* and turned each pattern into behavioral rules.
 
-[IMAGE — Sridev Ramesh YouTube Short]
+![BeingHuman Skill Preview](images/Skill.png)
 
 ### The Idea
 
@@ -53,7 +53,7 @@ The research foundation was **Wikipedia's article "Signs of AI Writing"** — a 
 - Formatting quirks
 - Statistical signatures of language model output
 
-[IMAGE — Wikipedia Article Screenshot]
+![Wikipedia Signs of AI Writing](images/2nd%20-%20Wikipedia%20Signs%20of%20AI%20writing.png)
 
 ### Why This Matters
 
@@ -505,7 +505,7 @@ The skill was tested using a controlled experiment:
 4. **Detection Tool:** Grammarly AI Detection.
 5. **Environment:** OpenCode running DeepSeek model.
 
-[IMAGE - Grammarly Validation Results]
+![Grammarly Proof of AI Detection](images/3rd%20-%20Grammarly%20Proof.png)
 
 ### Results
 
@@ -519,7 +519,7 @@ The skill was tested using a controlled experiment:
 | Formal Transitions | "However,", "originally erected" | Simple statements |
 | Text Length | ~30% longer | Concise |
 
-[IMAGE - Before vs After Side-by-Side]
+![Generated Text Comparison](images/4th%20-%20Generated%20text.png)
 
 ### Key Observations
 
@@ -640,7 +640,7 @@ Interests: Artificial Intelligence, Machine Learning, Deep Learning, Prompt Engi
 
 Pawan built BeingHuman to understand AI writing detection and create tools that produce natural text without losing accuracy.
 
-[IMAGE - About the Author]
+![Author Image](images/Skill.png)
 
 **Connect:**
 - LinkedIn: [LINKEDIN LINK]
