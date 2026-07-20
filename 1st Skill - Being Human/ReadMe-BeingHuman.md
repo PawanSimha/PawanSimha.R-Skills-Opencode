@@ -1,8 +1,8 @@
-# BeingHuman — README
+# BeingHuman - README
 
 ## An AI writing optimization skill for OpenCode
 
-**Version 1.0** — July 2026
+**Version 1.0** - July 2026
 
 **Author:** Pawan Simha R
 
@@ -16,11 +16,11 @@
 
 1. [Origin & Inspiration](#1-origin--inspiration)
 2. [Reverse Engineering & Build Process](#2-reverse-engineering--build-process)
-3. [How It Works — Architecture Overview](#3-how-it-works--architecture-overview)
+3. [How It Works - Architecture Overview](#3-how-it-works--architecture-overview)
 4. [Priority Rule Engine](#4-priority-rule-engine)
-5. [Phase 1 — Detection Pipeline](#5-phase-1--detection-pipeline)
-6. [Phase 2 — Rewrite Pipeline](#6-phase-2--rewrite-pipeline)
-7. [Phase 3 — Internal Review](#7-phase-3--internal-review)
+5. [Phase 1 - Detection Pipeline](#5-phase-1--detection-pipeline)
+6. [Phase 2 - Rewrite Pipeline](#6-phase-2--rewrite-pipeline)
+7. [Phase 3 - Internal Review](#7-phase-3--internal-review)
 8. [Domain Exceptions](#8-domain-exceptions)
 9. [Installation](#9-installation)
 10. [Usage Examples](#10-usage-examples)
@@ -45,7 +45,7 @@ The Claude implementation showed it was possible to detect and remove AI writing
 
 ### The Knowledge Source
 
-The research foundation was **Wikipedia's article "Signs of AI Writing"** — a community-documented catalog of patterns that make text identifiable as AI-generated:
+The research foundation was **Wikipedia's article "Signs of AI Writing"**, a community-documented catalog of patterns that make text identifiable as AI-generated:
 
 - Overrepresented vocabulary
 - Repetitive sentence structures
@@ -96,11 +96,11 @@ Wikipedia Article      Rule Categories
 ### ChatGPT's Role
 
 ChatGPT acted as:
-- **Technical Reviewer** — analyzed each section of the extracted patterns
-- **Architecture Consultant** — reviewed the skill structure and suggested improvements
-- **Prompt Engineering Assistant** — helped design detection and rewrite prompts
-- **Quality Assurance** — verified implementation decisions
-- **Verification Assistant** — checked outputs for consistency
+- **Technical Reviewer:** analyzed each section of the extracted patterns
+- **Architecture Consultant:** reviewed the skill structure and suggested improvements
+- **Prompt Engineering Assistant:** helped design detection and rewrite prompts
+- **Quality Assurance:** verified implementation decisions
+- **Verification Assistant:** checked outputs for consistency
 
 ### OpenCode's Role
 
@@ -126,7 +126,7 @@ This prevents unnecessary rewriting, protects technical writing, and applies the
 
 ---
 
-## 3. How It Works — Architecture Overview
+## 3. How It Works - Architecture Overview
 
 The skill runs as a **three-phase pipeline** inside OpenCode:
 
@@ -230,11 +230,11 @@ AI writing patterns exist on a spectrum. Some are near-definitive indicators. Th
 
 ---
 
-## 5. Phase 1 — Detection Pipeline
+## 5. Phase 1 - Detection Pipeline
 
 The detection phase scans input text for **four categories** of AI writing patterns.
 
-### 5.1 Vocabulary — AI Word Clusters
+### 5.1 Vocabulary - AI Word Clusters
 
 Certain words co-occur in LLM output at rates far above human writing. These are the strongest tells.
 
@@ -246,7 +246,7 @@ Certain words co-occur in LLM output at rates far above human writing. These are
 | HIGH | Marketing puffery | boasts a, nestled in, in the heart of, groundbreaking, world-renowned, diverse array |
 | HIGH | Notability boilerplate | independent coverage, profiled in, maintains an active social media presence |
 
-### 5.2 Sentence Structure — AI Templates
+### 5.2 Sentence Structure - AI Templates
 
 | Priority | Pattern | AI Signature |
 |----------|---------|-------------|
@@ -256,7 +256,7 @@ Certain words co-occur in LLM output at rates far above human writing. These are
 | LOW | Elegant variation | Swapping synonyms to avoid word repetition |
 | MEDIUM | Challenges template | "Despite its [positive], [subject] faces challenges..." |
 
-### 5.3 Content Patterns — AI Moves
+### 5.3 Content Patterns - AI Moves
 
 | Priority | Pattern | AI Move |
 |----------|---------|---------|
@@ -267,7 +267,7 @@ Certain words co-occur in LLM output at rates far above human writing. These are
 | MEDIUM | Source count inflation | 1-2 sources presented as "multiple" |
 | HIGH | Notability hammering | Listing media outlets with type labels |
 
-### 5.4 Formatting — AI Quirks
+### 5.4 Formatting - AI Quirks
 
 | Priority | Quirk | Fix |
 |----------|-------|-----|
@@ -280,7 +280,7 @@ Certain words co-occur in LLM output at rates far above human writing. These are
 
 ---
 
-## 6. Phase 2 — Rewrite Pipeline
+## 6. Phase 2 - Rewrite Pipeline
 
 Seven rewrite rules, applied in priority order.
 
@@ -337,7 +337,7 @@ Never replace: medical terms, legal terms of art, scientific nomenclature, techn
 
 ---
 
-## 7. Phase 3 — Internal Review
+## 7. Phase 3 - Internal Review
 
 Before returning any output, the skill verifies all 18 points:
 
@@ -632,21 +632,21 @@ A: Currently, all rules apply. Customization is planned for future releases.
 
 ### About the Author
 
-**Pawan Simha**
+**Pawan Simha R**
 
 Master of Computer Applications (MCA) Student
 
 Interests: Artificial Intelligence, Machine Learning, Deep Learning, Prompt Engineering, AI Product Management, Developer Experience
 
-Pawan built BeingHuman to understand AI writing detection and create tools that produce natural text without losing accuracy.
+Pawan Simha R built BeingHuman to understand AI writing detection and create tools that produce natural text without losing accuracy.
 
-![Author Image](images/Skill.png)
-
+![Developer - Pawan Simha R](images/Developer-PawanSimhaR.png)
 **Connect:**
-- LinkedIn: [LINKEDIN LINK]
-- Portfolio: [PORTFOLIO LINK]
-- GitHub: [GITHUB LINK]
-- Google Developer Profile: [GOOGLE DEVELOPER PROFILE]
+
+- LinkedIn: [Pawan Simha R](https://www.linkedin.com/in/pawansimha/)
+- Portfolio: [portfolio-pawansimha.vercel.app](https://portfolio-pawansimha.vercel.app/)
+- GitHub: [PawanSimha](https://github.com/PawanSimha)
+- Email: iampawansimha.2004@gmail.com
 
 ### References
 
