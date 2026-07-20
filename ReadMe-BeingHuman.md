@@ -422,8 +422,18 @@ Certain fields have legitimate reasons for patterns that would otherwise be flag
 ### Folder Structure
 
 ```
+ReadMe-BeingHuman.md          # Documentation
+being-human/
+    └── SKILL.md              # Main skill file
+images/                       # Screenshots and visuals
+test-files/                   # Sample test inputs
+LICENSE
+```
+
+**Install target** (on your system):
+```
 ~/.agents/skills/being-human/
-    └── SKILL.md              # Main skill file (261 lines)
+    └── SKILL.md
 ```
 
 ### Activation
