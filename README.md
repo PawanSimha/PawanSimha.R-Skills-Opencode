@@ -681,6 +681,10 @@ Pawan Simha R built BeingHuman to understand AI writing detection and create too
 
 *BeingHuman is an open-source project. Contributions, issues, and feature requests are welcome.*
 
+### License
+
+This project is licensed under the **GNU General Public License v3.0**. See the [LICENSE](LICENSE) file for details.
+
 ---
 
 **End of Document**
